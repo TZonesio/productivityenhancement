@@ -1,0 +1,26 @@
+{
+  "labels": [
+    "Main-d'œuvre",
+    "Réglages",
+    "Heures machine",
+    "Qualité",
+    "Logistique",
+    "Coût total"
+  ],
+  "measures": [
+    "relative",
+    "relative",
+    "relative",
+    "relative",
+    "relative",
+    "total"
+  ],
+  "values": [
+    12000,
+    3000,
+    8000,
+    2500,
+    1800,
+    0
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "nodes": [
+    {
+      "name": "Création",
+      "color": "#5fb3ff"
+    },
+    {
+      "name": "Planif",
+      "color": "#5fb3ff"
+    },
+    {
+      "name": "Démarrage",
+      "color": "#9fe870"
+    },
+    {
+      "name": "Fin partielle",
+      "color": "#ffd166"
+    },
+    {
+      "name": "Clôture",
+      "color": "#9fe870"
+    },
+    {
+      "name": "Rework",
+      "color": "#ff6b6b"
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "target": 1,
+      "value": 120
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "value": 110
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "value": 60
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "value": 55
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "value": 15
+    },
+    {
+      "source": 5,
+      "target": 3,
+      "value": 12
+    },
+    {
+      "source": 3,
+      "target": 4,
+      "value": 10
+    }
+  ]
+}

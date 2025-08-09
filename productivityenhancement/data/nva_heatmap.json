@@ -1,0 +1,41 @@
+{
+  "rows": [
+    "OF Assemblage",
+    "OF Peinture",
+    "Ticket SAV",
+    "Commande Achat",
+    "Prépa Expédition"
+  ],
+  "columns": [
+    "Site A",
+    "Site B",
+    "Site C"
+  ],
+  "matrix": [
+    [
+      12,
+      9,
+      7
+    ],
+    [
+      18,
+      14,
+      11
+    ],
+    [
+      22,
+      19,
+      15
+    ],
+    [
+      10,
+      8,
+      6
+    ],
+    [
+      9,
+      12,
+      7
+    ]
+  ]
+}

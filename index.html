@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABC • BoM/BoP • Process Mining — Démo</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <img src="./assets/logo.svg" alt="logo"/>
+        <h1>ABC • BoM/BoP • Process Mining — Démonstration</h1>
+      </div>
+      <p>Démo statique prête pour GitHub Pages, conçue pour fonctionner dans un sous-dossier (ex. /organisation.github.io/productivityenhancement).</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls card">
+      <h2>Configuration de démonstration</h2>
+      <div class="grid">
+        <div class="field">
+          <label>Packs actifs</label>
+          <div class="chips">
+            <label><input type="checkbox" id="pack-rh" checked/> RH</label>
+            <label><input type="checkbox" id="pack-procedes" checked/> Procédés</label>
+            <label><input type="checkbox" id="pack-supply" checked/> Supply</label>
+            <label><input type="checkbox" id="pack-services" checked/> Services</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Scénario</label>
+          <select id="scenario">
+            <option value="baseline">BU — 12 mois</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Simulation rework</label>
+          <input type="range" id="whatif" min="0" max="50" value="0"/>
+          <div class="hint"><span id="whatif-val">0</span>% de réduction du rework</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi card"><div class="kpi-label">€/Unité</div><div class="kpi-value" id="kpi-eur">—</div></div>
+      <div class="kpi card"><div class="kpi-label">Marge %</div><div class="kpi-value" id="kpi-marge">—</div></div>
+      <div class="kpi card"><div class="kpi-label">OEE (proxy)</div><div class="kpi-value" id="kpi-oee">—</div></div>
+      <div class="kpi card"><div class="kpi-label">SLA</div><div class="kpi-value" id="kpi-sla">—</div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card"><h3>Margin Bridge — Standard → Réel</h3><div id="chart-bridge"></div></div>
+      <div class="card"><h3>ABC Waterfall — Coût par activité</h3><div id="chart-waterfall"></div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card"><h3>Variants & Conformance</h3><div id="chart-sankey"></div></div>
+      <div class="card"><h3>Heatmap NVA — % Non-Valeur</h3><div id="chart-heatmap"></div></div>
+    </section>
+
+    <section class="card prose">
+      <h3>À propos</h3>
+      <p>La démo reste autonome et chargée via des fichiers JSON locaux afin d’être servie proprement sous un sous-répertoire GitHub Pages sans dépendance serveur ni chemin absolu.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><div>© Démo ABC/BoM/BoP & Process Mining — GitHub Pages</div></footer>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
