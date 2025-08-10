@@ -84,7 +84,32 @@
 
 <br>Heatmap NVA
 <br>Une carte de chaleur des % de non-valeur à travers les processus (OF, Tickets, Achats, Expédition) et les sites A/B/C, mettant en évidence les zones où se concentre le gaspillage.</p>
-   </p> </section>
+   </p> 
+    <p> Ce que fait l'outil : <br><br>
+   Il Iidentifie où le rework se produit (variants, goulots, équipes, produits/clients). Il ciffre son impact (ABC + pont de marge). Il simuler les gains si on le réduit (curseur what-if dans la démo). Il priorise des actions : stabilisation des standards de gamme, réglages, contrôle à la source, formation, check-lists, suppression de doubles validations, meilleure qualification des tickets.</p>
+    <p><strong>Le rework (reprise)</strong> désigne tout travail refait parce que le résultat initial n’était pas conforme : on corrige, on retouche, on redémarre une étape déjà passée. C’est du non-valeur pur pour le client et un générateur de surcoûts.<br><br>
+
+<strong>L’essentiel en pratique</strong><br>
+<em>En production :</em> retouches, retravail après non-conformité, démontage/remontage, reprises après défaut qualité ou erreur de réglage.<br>
+<em>Dans les données :</em> opérations répétées, retour d’op<sub>i</sub> vers op<sub>i-1</sub>, augmentation des temps réels vs temps standards, rebuts/reprises enregistrés.<br><br>
+
+<em>En services/SAV :</em> tickets réouverts, déplacements supplémentaires, corrections d’intervention, double saisie.<br>
+<em>Dans les données :</em> reopen d’un ticket, visites additionnelles, pièces remplacées sans résoudre le problème.<br><br>
+
+<strong>Comment on le mesure</strong><br>
+<em>Taux de rework :</em> (quantités retravaillées ou cas réouverts) / (quantités totales ou tickets).<br>
+<em>Coût du rework (COPQ) :</em> temps supplémentaire × taux centre/ressource + pièces/consommables + logistique/déplacements.<br>
+<em>Dans ABC :</em> imputation via des drivers (heures de reprise, #reworks, pièces retravaillées).<br>
+<em>Dans BoM/BoP :</em> apparaît comme écart process/temps (réel &gt; standard) et coût de non-qualité.<br>
+<em>En process mining :</em> détection de boucles et retours en arrière (rework) dans le journal d’événements.<br><br>
+
+<strong>Effets sur vos KPI</strong><br>
+€/U monte (plus d’heures et de consommations).<br>
+Marge % baisse.<br>
+OEE (proxy) se dégrade via la composante Qualité/Performance.<br>
+SLA peut chuter (réouvertures, délais plus longs).</p>
+
+    </section>
   </main>
 
   <footer class="footer"><div>© Démo CGC/ABC/BoM/BoP & Process Mining</div></footer>
