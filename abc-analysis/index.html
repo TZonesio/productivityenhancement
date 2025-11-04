@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABC Analysis — Productivity Enhancement</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <img src="../assets/logo.svg" alt="logo"/>
+        <h1>ABC Analysis — Productivity Enhancement</h1>
+      </div>
+      <p>Analyse ABC complète pour l'identification des opportunités d'amélioration de la productivité, l'analyse des nomenclatures (BoM), produits et services.</p>
+      <div class="nav-links">
+        <a href="../index.html" class="nav-link">← Retour à la démo originale</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls card">
+      <h2>Configuration de démonstration</h2>
+      <div class="grid">
+        <div class="field">
+          <label>Packs actifs</label>
+          <div class="chips">
+            <label><input type="checkbox" id="pack-rh" checked/> RH</label>
+            <label><input type="checkbox" id="pack-procedes" checked/> Procédés</label>
+            <label><input type="checkbox" id="pack-supply" checked/> Supply</label>
+            <label><input type="checkbox" id="pack-services" checked/> Services</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Scénario</label>
+          <select id="scenario">
+            <option value="baseline">BU — 12 mois</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Simulation rework</label>
+          <input type="range" id="whatif" min="0" max="50" value="0"/>
+          <div class="hint"><span id="whatif-val">0</span>% de réduction du rework</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="kpi card"><div class="kpi-label">€/Unité</div><div class="kpi-value" id="kpi-eur">—</div></div>
+      <div class="kpi card"><div class="kpi-label">Marge %</div><div class="kpi-value" id="kpi-marge">—</div></div>
+      <div class="kpi card"><div class="kpi-label">OEE (proxy)</div><div class="kpi-value" id="kpi-oee">—</div></div>
+      <div class="kpi card"><div class="kpi-label">SLA</div><div class="kpi-value" id="kpi-sla">—</div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card"><h3>Margin Bridge — Standard → Réel</h3><div id="chart-bridge"></div></div>
+      <div class="card"><h3>ABC Waterfall — Coût par activité</h3><div id="chart-waterfall"></div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="card"><h3>Variants & Conformité</h3><div id="chart-sankey"></div></div>
+      <div class="card"><h3>Heatmap NVA — % Non-Valeur</h3><div id="chart-heatmap"></div></div>
+    </section>
+
+    <section class="card abc-section">
+      <h2>Analyse ABC — Identification des leviers de productivité</h2>
+      <div class="abc-tabs">
+        <button class="abc-tab active" data-tab="pareto">Classification ABC</button>
+        <button class="abc-tab" data-tab="bom">Bill of Materials</button>
+        <button class="abc-tab" data-tab="products">Produits & Services</button>
+        <button class="abc-tab" data-tab="opportunities">Opportunités</button>
+      </div>
+
+      <div class="abc-content">
+        <div id="tab-pareto" class="abc-tab-content active">
+          <div class="abc-info">
+            <p>Classification Pareto (80/20) : Catégorie A = 80% de la valeur, B = 15%, C = 5%</p>
+          </div>
+          <div class="grid-2">
+            <div class="card-inner"><h4>BoM — Composants par valeur</h4><div id="chart-abc-bom"></div></div>
+            <div class="card-inner"><h4>Produits & Services par marge</h4><div id="chart-abc-products"></div></div>
+          </div>
+          <div class="abc-summary">
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie A (BoM)</div>
+              <div class="stat-value" id="stat-bom-a-count">—</div>
+              <div class="stat-desc" id="stat-bom-a-value">—</div>
+            </div>
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie B (BoM)</div>
+              <div class="stat-value" id="stat-bom-b-count">—</div>
+              <div class="stat-desc" id="stat-bom-b-value">—</div>
+            </div>
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie C (BoM)</div>
+              <div class="stat-value" id="stat-bom-c-count">—</div>
+              <div class="stat-desc" id="stat-bom-c-value">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-bom" class="abc-tab-content">
+          <div class="table-container">
+            <table class="data-table" id="bom-table">
+              <thead>
+                <tr>
+                  <th>Classe</th>
+                  <th>Réf</th>
+                  <th>Désignation</th>
+                  <th>Catégorie</th>
+                  <th>Coût annuel</th>
+                  <th>% Total</th>
+                  <th>% Cumulé</th>
+                  <th>Fournisseur</th>
+                  <th>Délai (j)</th>
+                </tr>
+              </thead>
+              <tbody id="bom-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-products" class="abc-tab-content">
+          <div class="table-container">
+            <table class="data-table" id="products-table">
+              <thead>
+                <tr>
+                  <th>Classe</th>
+                  <th>Réf</th>
+                  <th>Désignation</th>
+                  <th>Type</th>
+                  <th>Vol. annuel</th>
+                  <th>Marge annuelle</th>
+                  <th>Marge %</th>
+                  <th>% Total</th>
+                  <th>% Cumulé</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-opportunities" class="abc-tab-content">
+          <div class="opportunities-grid">
+            <div id="opportunities-list">
+            </div>
+          </div>
+          <div class="opportunities-summary">
+            <div class="summary-card">
+              <div class="summary-label">Économies potentielles totales</div>
+              <div class="summary-value" id="total-savings">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">Investissement requis</div>
+              <div class="summary-value" id="total-investment">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">ROI moyen (mois)</div>
+              <div class="summary-value" id="avg-roi">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">Opportunités prioritaires</div>
+              <div class="summary-value" id="high-priority-count">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card prose">
+      <h3>À propos de l'analyse ABC</h3>
+      <p><strong>L'analyse ABC</strong> est une méthode de classification basée sur le principe de Pareto (80/20) qui permet d'identifier et de prioriser les éléments ayant le plus grand impact sur les coûts, les revenus ou la productivité.</p>
+
+      <h4>Applications dans cette démo :</h4>
+      <ul>
+        <li><strong>Bill of Materials (BoM)</strong> : Classification des composants par coût annuel pour optimiser les négociations fournisseurs et la gestion des stocks</li>
+        <li><strong>Produits & Services</strong> : Analyse par marge pour identifier les produits les plus rentables et optimiser le mix produit</li>
+        <li><strong>Opportunités de productivité</strong> : Priorisation des initiatives d'amélioration par ROI et impact sur les KPI</li>
+      </ul>
+
+      <h4>Méthodologie :</h4>
+      <ul>
+        <li><strong>Catégorie A</strong> : 20% des items représentant 80% de la valeur → Focus maximal, contrôle strict</li>
+        <li><strong>Catégorie B</strong> : 30% des items représentant 15% de la valeur → Contrôle modéré</li>
+        <li><strong>Catégorie C</strong> : 50% des items représentant 5% de la valeur → Gestion simplifiée</li>
+      </ul>
+
+      <h4>Bénéfices :</h4>
+      <ul>
+        <li>Concentration des efforts sur les éléments à fort impact</li>
+        <li>Optimisation de l'allocation des ressources</li>
+        <li>Réduction des coûts de gestion et de stockage</li>
+        <li>Amélioration de la prise de décision stratégique</li>
+        <li>Identification rapide des opportunités d'amélioration</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer"><div>© CGC 2024 - 2025 - ABC Analysis & Productivity Enhancement</div></footer>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

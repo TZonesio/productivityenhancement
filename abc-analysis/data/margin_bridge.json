@@ -1,0 +1,38 @@
+{
+  "labels": [
+    "Standard",
+    "Prix",
+    "Rendement",
+    "Process",
+    "Mix",
+    "Volume",
+    "Réel"
+  ],
+  "measures": [
+    "absolute",
+    "relative",
+    "relative",
+    "relative",
+    "relative",
+    "relative",
+    "total"
+  ],
+  "values": [
+    100000,
+    -15000,
+    -8000,
+    -12000,
+    5000,
+    10000,
+    0
+  ],
+  "text": [
+    "",
+    "-15k",
+    "-8k",
+    "-12k",
+    "+5k",
+    "+10k",
+    ""
+  ]
+}
