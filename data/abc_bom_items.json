@@ -1,0 +1,154 @@
+{
+  "items": [
+    {
+      "id": "BOM-001",
+      "name": "Peinture époxy premium",
+      "category": "Matière première",
+      "annual_quantity": 5000,
+      "unit_cost": 45.50,
+      "annual_cost": 227500,
+      "supplier": "ChemiPro SA",
+      "lead_time_days": 7
+    },
+    {
+      "id": "BOM-002",
+      "name": "Tube aluminium Ø50mm",
+      "category": "Composant structurel",
+      "annual_quantity": 12000,
+      "unit_cost": 12.80,
+      "annual_cost": 153600,
+      "supplier": "MetalTech Industries",
+      "lead_time_days": 14
+    },
+    {
+      "id": "BOM-003",
+      "name": "Visserie inox A4",
+      "category": "Quincaillerie",
+      "annual_quantity": 80000,
+      "unit_cost": 0.15,
+      "annual_cost": 12000,
+      "supplier": "FastenPro",
+      "lead_time_days": 3
+    },
+    {
+      "id": "BOM-004",
+      "name": "Toile textilène haute résistance",
+      "category": "Matière première",
+      "annual_quantity": 3500,
+      "unit_cost": 28.90,
+      "annual_cost": 101150,
+      "supplier": "Textiles Outdoor",
+      "lead_time_days": 21
+    },
+    {
+      "id": "BOM-005",
+      "name": "Vernis anti-UV",
+      "category": "Finition",
+      "annual_quantity": 2800,
+      "unit_cost": 18.50,
+      "annual_cost": 51800,
+      "supplier": "ChemiPro SA",
+      "lead_time_days": 7
+    },
+    {
+      "id": "BOM-006",
+      "name": "Pieds réglables plastique",
+      "category": "Accessoire",
+      "annual_quantity": 24000,
+      "unit_cost": 1.20,
+      "annual_cost": 28800,
+      "supplier": "PlastiParts",
+      "lead_time_days": 10
+    },
+    {
+      "id": "BOM-007",
+      "name": "Carton emballage",
+      "category": "Emballage",
+      "annual_quantity": 15000,
+      "unit_cost": 2.50,
+      "annual_cost": 37500,
+      "supplier": "PackSolutions",
+      "lead_time_days": 5
+    },
+    {
+      "id": "BOM-008",
+      "name": "Film protection polyéthylène",
+      "category": "Emballage",
+      "annual_quantity": 18000,
+      "unit_cost": 0.80,
+      "annual_cost": 14400,
+      "supplier": "PackSolutions",
+      "lead_time_days": 5
+    },
+    {
+      "id": "BOM-009",
+      "name": "Boulons assemblage M8",
+      "category": "Quincaillerie",
+      "annual_quantity": 45000,
+      "unit_cost": 0.25,
+      "annual_cost": 11250,
+      "supplier": "FastenPro",
+      "lead_time_days": 3
+    },
+    {
+      "id": "BOM-010",
+      "name": "Coussin assise premium",
+      "category": "Accessoire",
+      "annual_quantity": 6000,
+      "unit_cost": 15.50,
+      "annual_cost": 93000,
+      "supplier": "Confort Plus",
+      "lead_time_days": 18
+    },
+    {
+      "id": "BOM-011",
+      "name": "Colle structural epoxy",
+      "category": "Consommable",
+      "annual_quantity": 800,
+      "unit_cost": 22.00,
+      "annual_cost": 17600,
+      "supplier": "ChemiPro SA",
+      "lead_time_days": 7
+    },
+    {
+      "id": "BOM-012",
+      "name": "Étiquettes produit",
+      "category": "Marquage",
+      "annual_quantity": 16000,
+      "unit_cost": 0.35,
+      "annual_cost": 5600,
+      "supplier": "LabelPrint",
+      "lead_time_days": 4
+    },
+    {
+      "id": "BOM-013",
+      "name": "Plaque métal de renfort",
+      "category": "Composant structurel",
+      "annual_quantity": 8000,
+      "unit_cost": 3.80,
+      "annual_cost": 30400,
+      "supplier": "MetalTech Industries",
+      "lead_time_days": 14
+    },
+    {
+      "id": "BOM-014",
+      "name": "Rondelles élastiques",
+      "category": "Quincaillerie",
+      "annual_quantity": 60000,
+      "unit_cost": 0.08,
+      "annual_cost": 4800,
+      "supplier": "FastenPro",
+      "lead_time_days": 3
+    },
+    {
+      "id": "BOM-015",
+      "name": "Traitement anti-corrosion",
+      "category": "Finition",
+      "annual_quantity": 1200,
+      "unit_cost": 12.50,
+      "annual_cost": 15000,
+      "supplier": "SurfaceTech",
+      "lead_time_days": 10
+    }
+  ]
+}

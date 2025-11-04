@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": "PROD-001",
+      "name": "Table de jardin Luxe 6 places",
+      "type": "Produit",
+      "annual_units": 2500,
+      "revenue_per_unit": 450.00,
+      "cost_per_unit": 280.00,
+      "annual_revenue": 1125000,
+      "annual_cost": 700000,
+      "margin": 425000,
+      "margin_pct": 37.78
+    },
+    {
+      "id": "PROD-002",
+      "name": "Chaise pliante confort",
+      "type": "Produit",
+      "annual_units": 8000,
+      "revenue_per_unit": 85.00,
+      "cost_per_unit": 52.00,
+      "annual_revenue": 680000,
+      "annual_cost": 416000,
+      "margin": 264000,
+      "margin_pct": 38.82
+    },
+    {
+      "id": "PROD-003",
+      "name": "Parasol déporté 3m",
+      "type": "Produit",
+      "annual_units": 1800,
+      "revenue_per_unit": 320.00,
+      "cost_per_unit": 195.00,
+      "annual_revenue": 576000,
+      "annual_cost": 351000,
+      "margin": 225000,
+      "margin_pct": 39.06
+    },
+    {
+      "id": "PROD-004",
+      "name": "Banc 2 places métal",
+      "type": "Produit",
+      "annual_units": 3200,
+      "revenue_per_unit": 180.00,
+      "cost_per_unit": 112.00,
+      "annual_revenue": 576000,
+      "annual_cost": 358400,
+      "margin": 217600,
+      "margin_pct": 37.78
+    },
+    {
+      "id": "PROD-005",
+      "name": "Salon de jardin 4 pièces",
+      "type": "Produit",
+      "annual_units": 1500,
+      "revenue_per_unit": 650.00,
+      "cost_per_unit": 420.00,
+      "annual_revenue": 975000,
+      "annual_cost": 630000,
+      "margin": 345000,
+      "margin_pct": 35.38
+    },
+    {
+      "id": "PROD-006",
+      "name": "Transat réglable textilène",
+      "type": "Produit",
+      "annual_units": 4500,
+      "revenue_per_unit": 125.00,
+      "cost_per_unit": 78.00,
+      "annual_revenue": 562500,
+      "annual_cost": 351000,
+      "margin": 211500,
+      "margin_pct": 37.60
+    },
+    {
+      "id": "SERV-001",
+      "name": "Montage à domicile",
+      "type": "Service",
+      "annual_units": 1200,
+      "revenue_per_unit": 75.00,
+      "cost_per_unit": 45.00,
+      "annual_revenue": 90000,
+      "annual_cost": 54000,
+      "margin": 36000,
+      "margin_pct": 40.00
+    },
+    {
+      "id": "SERV-002",
+      "name": "Extension garantie 5 ans",
+      "type": "Service",
+      "annual_units": 3500,
+      "revenue_per_unit": 45.00,
+      "cost_per_unit": 12.00,
+      "annual_revenue": 157500,
+      "annual_cost": 42000,
+      "margin": 115500,
+      "margin_pct": 73.33
+    },
+    {
+      "id": "SERV-003",
+      "name": "Maintenance annuelle",
+      "type": "Service",
+      "annual_units": 800,
+      "revenue_per_unit": 95.00,
+      "cost_per_unit": 55.00,
+      "annual_revenue": 76000,
+      "annual_cost": 44000,
+      "margin": 32000,
+      "margin_pct": 42.11
+    },
+    {
+      "id": "PROD-007",
+      "name": "Table basse extérieur",
+      "type": "Produit",
+      "annual_units": 5500,
+      "revenue_per_unit": 95.00,
+      "cost_per_unit": 58.00,
+      "annual_revenue": 522500,
+      "annual_cost": 319000,
+      "margin": 203500,
+      "margin_pct": 38.95
+    },
+    {
+      "id": "PROD-008",
+      "name": "Fauteuil relax jardin",
+      "type": "Produit",
+      "annual_units": 2800,
+      "revenue_per_unit": 210.00,
+      "cost_per_unit": 135.00,
+      "annual_revenue": 588000,
+      "annual_cost": 378000,
+      "margin": 210000,
+      "margin_pct": 35.71
+    },
+    {
+      "id": "SERV-004",
+      "name": "Livraison express 24h",
+      "type": "Service",
+      "annual_units": 2200,
+      "revenue_per_unit": 35.00,
+      "cost_per_unit": 25.00,
+      "annual_revenue": 77000,
+      "annual_cost": 55000,
+      "margin": 22000,
+      "margin_pct": 28.57
+    }
+  ]
+}

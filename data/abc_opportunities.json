@@ -1,0 +1,236 @@
+{
+  "opportunities": [
+    {
+      "id": "OPP-001",
+      "title": "Réduction du rework en peinture",
+      "category": "Qualité",
+      "impact_type": "Cost reduction",
+      "current_cost_annual": 85000,
+      "potential_savings_annual": 63750,
+      "savings_pct": 75,
+      "implementation_cost": 25000,
+      "roi_months": 4.7,
+      "priority": "High",
+      "affected_processes": ["Peinture", "Contrôle qualité", "Retouche"],
+      "root_causes": [
+        "Réglages de cabine non standardisés",
+        "Formation opérateurs insuffisante",
+        "Viscosité peinture non contrôlée"
+      ],
+      "actions": [
+        "Standardiser les paramètres de cabine",
+        "Former 8 opérateurs aux bonnes pratiques",
+        "Installer viscosimètre automatique"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -3.40,
+        "margin_pct": 2.8,
+        "oee": 6.5,
+        "defect_rate": -12.0
+      }
+    },
+    {
+      "id": "OPP-002",
+      "title": "Optimisation des changements de série",
+      "category": "Performance",
+      "impact_type": "Time reduction",
+      "current_cost_annual": 68000,
+      "potential_savings_annual": 40800,
+      "savings_pct": 60,
+      "implementation_cost": 15000,
+      "roi_months": 4.4,
+      "priority": "High",
+      "affected_processes": ["Réglages", "Démarrage production", "Qualification"],
+      "root_causes": [
+        "Outillages non pré-positionnés",
+        "Absence de check-list SMED",
+        "Manque de standardisation"
+      ],
+      "actions": [
+        "Mettre en place méthode SMED",
+        "Créer chariot d'outillage pré-équipé",
+        "Digitaliser les check-lists de changement"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -2.10,
+        "margin_pct": 1.7,
+        "oee": 8.2,
+        "changeover_time": -35.0
+      }
+    },
+    {
+      "id": "OPP-003",
+      "title": "Consolidation fournisseurs quincaillerie",
+      "category": "Supply Chain",
+      "impact_type": "Cost reduction",
+      "current_cost_annual": 45000,
+      "potential_savings_annual": 13500,
+      "savings_pct": 30,
+      "implementation_cost": 5000,
+      "roi_months": 4.4,
+      "priority": "Medium",
+      "affected_processes": ["Approvisionnement", "Réception", "Gestion stock"],
+      "root_causes": [
+        "Multiples fournisseurs pour items similaires",
+        "Volumes d'achat fragmentés",
+        "Frais de port multiples"
+      ],
+      "actions": [
+        "Négocier contrat cadre avec fournisseur principal",
+        "Regrouper références similaires",
+        "Optimiser fréquence de livraison"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -0.85,
+        "margin_pct": 0.7,
+        "inventory_days": -8.0,
+        "admin_time": -25.0
+      }
+    },
+    {
+      "id": "OPP-004",
+      "title": "Élimination doubles contrôles qualité",
+      "category": "Process efficiency",
+      "impact_type": "Time & cost reduction",
+      "current_cost_annual": 52000,
+      "potential_savings_annual": 36400,
+      "savings_pct": 70,
+      "implementation_cost": 8000,
+      "roi_months": 2.6,
+      "priority": "High",
+      "affected_processes": ["Contrôle en-cours", "Contrôle final", "Documentation"],
+      "root_causes": [
+        "Redondance entre contrôles en-cours et final",
+        "Manque de confiance dans le 1er contrôle",
+        "Absence de poka-yoke"
+      ],
+      "actions": [
+        "Analyser capabilité processus existant",
+        "Mettre en place autocontrôle avec poka-yoke",
+        "Former contrôleurs à la validation statistique"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -1.95,
+        "margin_pct": 1.6,
+        "cycle_time": -12.0,
+        "headcount": -1.5
+      }
+    },
+    {
+      "id": "OPP-005",
+      "title": "Digitalisation bons de travail",
+      "category": "Digital transformation",
+      "impact_type": "Time & quality improvement",
+      "current_cost_annual": 38000,
+      "potential_savings_annual": 26600,
+      "savings_pct": 70,
+      "implementation_cost": 35000,
+      "roi_months": 15.8,
+      "priority": "Medium",
+      "affected_processes": ["Planification", "Suivi OF", "Traçabilité"],
+      "root_causes": [
+        "Bons papier perdus ou illisibles",
+        "Doubles saisies multiples",
+        "Retard de remontée d'information"
+      ],
+      "actions": [
+        "Déployer application mobile pour OF",
+        "Intégrer avec ERP existant",
+        "Former équipes à l'outil digital"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -1.40,
+        "margin_pct": 1.1,
+        "data_accuracy": 35.0,
+        "admin_time": -40.0
+      }
+    },
+    {
+      "id": "OPP-006",
+      "title": "Réduction stocks composants C",
+      "category": "Inventory management",
+      "impact_type": "Working capital reduction",
+      "current_cost_annual": 28000,
+      "potential_savings_annual": 14000,
+      "savings_pct": 50,
+      "implementation_cost": 3000,
+      "roi_months": 2.6,
+      "priority": "Low",
+      "affected_processes": ["Gestion stock", "Approvisionnement"],
+      "root_causes": [
+        "Sur-stock items faible valeur",
+        "Lead times courts non exploités",
+        "Lots minimums trop élevés"
+      ],
+      "actions": [
+        "Analyser rotation items catégorie C",
+        "Négocier réduction lots minimums",
+        "Passer en approvisionnement à la commande"
+      ],
+      "kpi_impact": {
+        "working_capital": -28000,
+        "inventory_days": -15.0,
+        "warehouse_space": -8.0
+      }
+    },
+    {
+      "id": "OPP-007",
+      "title": "Amélioration packaging pour réduire casse",
+      "category": "Qualité",
+      "impact_type": "Cost reduction",
+      "current_cost_annual": 42000,
+      "potential_savings_annual": 33600,
+      "savings_pct": 80,
+      "implementation_cost": 12000,
+      "roi_months": 4.3,
+      "priority": "Medium",
+      "affected_processes": ["Emballage", "Expédition", "SAV"],
+      "root_causes": [
+        "Protection insuffisante des angles",
+        "Calage inadapté au transport",
+        "Taux de casse 4.2% (objectif <1%)"
+      ],
+      "actions": [
+        "Redesigner emballage avec renforts",
+        "Tester résistance chocs",
+        "Former équipe logistique"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -1.80,
+        "margin_pct": 1.5,
+        "damage_rate": -75.0,
+        "customer_satisfaction": 15.0
+      }
+    },
+    {
+      "id": "OPP-008",
+      "title": "Maintenance préventive lignes peinture",
+      "category": "Maintenance",
+      "impact_type": "Availability improvement",
+      "current_cost_annual": 55000,
+      "potential_savings_annual": 38500,
+      "savings_pct": 70,
+      "implementation_cost": 18000,
+      "roi_months": 5.6,
+      "priority": "High",
+      "affected_processes": ["Peinture", "Maintenance"],
+      "root_causes": [
+        "Pannes non planifiées fréquentes",
+        "Maintenance curative > préventive",
+        "Pièces de rechange non disponibles"
+      ],
+      "actions": [
+        "Établir plan maintenance préventive",
+        "Constituer stock pièces critiques",
+        "Former techniciens maintenance"
+      ],
+      "kpi_impact": {
+        "cost_per_unit": -2.05,
+        "margin_pct": 1.7,
+        "oee": 9.5,
+        "mtbf": 45.0,
+        "mttr": -35.0
+      }
+    }
+  ]
+}

@@ -62,6 +62,114 @@
       <div class="card"><h3>Heatmap NVA — % Non-Valeur</h3><div id="chart-heatmap"></div></div>
     </section>
 
+    <section class="card abc-section">
+      <h2>Analyse ABC — Identification des leviers de productivité</h2>
+      <div class="abc-tabs">
+        <button class="abc-tab active" data-tab="pareto">Classification ABC</button>
+        <button class="abc-tab" data-tab="bom">Bill of Materials</button>
+        <button class="abc-tab" data-tab="products">Produits & Services</button>
+        <button class="abc-tab" data-tab="opportunities">Opportunités</button>
+      </div>
+
+      <div class="abc-content">
+        <div id="tab-pareto" class="abc-tab-content active">
+          <div class="abc-info">
+            <p>Classification Pareto (80/20) : Catégorie A = 80% de la valeur, B = 15%, C = 5%</p>
+          </div>
+          <div class="grid-2">
+            <div class="card-inner"><h4>BoM — Composants par valeur</h4><div id="chart-abc-bom"></div></div>
+            <div class="card-inner"><h4>Produits & Services par marge</h4><div id="chart-abc-products"></div></div>
+          </div>
+          <div class="abc-summary">
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie A (BoM)</div>
+              <div class="stat-value" id="stat-bom-a-count">—</div>
+              <div class="stat-desc" id="stat-bom-a-value">—</div>
+            </div>
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie B (BoM)</div>
+              <div class="stat-value" id="stat-bom-b-count">—</div>
+              <div class="stat-desc" id="stat-bom-b-value">—</div>
+            </div>
+            <div class="abc-stat">
+              <div class="stat-label">Items catégorie C (BoM)</div>
+              <div class="stat-value" id="stat-bom-c-count">—</div>
+              <div class="stat-desc" id="stat-bom-c-value">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-bom" class="abc-tab-content">
+          <div class="table-container">
+            <table class="data-table" id="bom-table">
+              <thead>
+                <tr>
+                  <th>Classe</th>
+                  <th>Réf</th>
+                  <th>Désignation</th>
+                  <th>Catégorie</th>
+                  <th>Coût annuel</th>
+                  <th>% Total</th>
+                  <th>% Cumulé</th>
+                  <th>Fournisseur</th>
+                  <th>Délai (j)</th>
+                </tr>
+              </thead>
+              <tbody id="bom-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-products" class="abc-tab-content">
+          <div class="table-container">
+            <table class="data-table" id="products-table">
+              <thead>
+                <tr>
+                  <th>Classe</th>
+                  <th>Réf</th>
+                  <th>Désignation</th>
+                  <th>Type</th>
+                  <th>Vol. annuel</th>
+                  <th>Marge annuelle</th>
+                  <th>Marge %</th>
+                  <th>% Total</th>
+                  <th>% Cumulé</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="tab-opportunities" class="abc-tab-content">
+          <div class="opportunities-grid">
+            <div id="opportunities-list">
+            </div>
+          </div>
+          <div class="opportunities-summary">
+            <div class="summary-card">
+              <div class="summary-label">Économies potentielles totales</div>
+              <div class="summary-value" id="total-savings">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">Investissement requis</div>
+              <div class="summary-value" id="total-investment">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">ROI moyen (mois)</div>
+              <div class="summary-value" id="avg-roi">—</div>
+            </div>
+            <div class="summary-card">
+              <div class="summary-label">Opportunités prioritaires</div>
+              <div class="summary-value" id="high-priority-count">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="card prose">
       <h3>À propos</h3>
       <p>Il s'agit d'une démo autonome chargée via des fichiers JSON locaux afin d’être servie proprement sous un sous-répertoire sans dépendance serveur ni chemin absolu.</p>
